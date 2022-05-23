@@ -3,6 +3,7 @@ import { Component } from "react";
 import { graphql } from "@apollo/client/react/hoc";
 
 import { gql } from "@apollo/client";
+import "./Category.css";
 
 const getCategoriesQuery = gql`
     query {
