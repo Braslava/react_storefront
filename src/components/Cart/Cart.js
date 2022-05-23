@@ -1,13 +1,14 @@
+
 import React, { Component } from 'react';
 
-class Header extends Component {
+class Cart extends Component {
     render() {
         return (
             <div>
-                Store nav
+                Shopping Cart
             </div>
         );
     }
 }
 
-export default Header;
+export default Cart;
