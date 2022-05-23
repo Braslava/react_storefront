@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./App.css";
+import "./global_styles/App.css";
 import Category from "./components/Category/Category";
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";

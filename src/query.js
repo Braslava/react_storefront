@@ -1,4 +1,6 @@
-query {
+import { gql } from "@apollo/client";
+
+const getAllQuery = gql`query {
 	categories
     {
     products {
@@ -26,6 +28,14 @@ query {
     }
   }
 }
+`
 
+const getCategoriesQuery = gql`
+    query {
+        categories {
+            name
+        }
+    }
+`;
 
-     
+export {getAllQuery, getCategoriesQuery}
