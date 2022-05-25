@@ -1,0 +1,15 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: var(--white);
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.loader__text {
+    z-index: 1010;
+}

@@ -1,0 +1,13 @@
+h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.category {
+    margin: 0 0.5rem;
+}
+
+.category__product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

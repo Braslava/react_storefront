@@ -1,0 +1,26 @@
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 1.3rem 0;
+    margin: 0 0.5rem;
+}
+
+.header__nav-items-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.header__logo {
+    justify-self: center;
+}
+
+.header__nav-link {
+    color: var(--main-text);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header__nav-link:hover, .header__nav-link:focus, .active-link {
+    color: var(--green);
+    border-bottom: 2px solid var(--green);
+}

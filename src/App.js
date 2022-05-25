@@ -1,34 +1,25 @@
 import { Component } from "react";
 import "./global_styles/App.css";
-import Category from "./components/Category/Category";
+import Category from "./Pages/Category/Category";
 import Header from "./components/Header/Header";
-import Cart from "./components/Cart/Cart";
+import Cart from "./Pages/Cart/Cart";
+import NotFound from "./Pages/NotFound/NotFound";
 import { Routes, Route, Link } from "react-router-dom";
-import { getCategoriesQuery } from "./query";
-import { graphql } from "@apollo/client/react/hoc";
 
 class App extends Component {
     render() {
-        const data = this.props.data;
-        console.log(data);
-
-        const createRoutes = () => {
-            return data.categories.map((category) => {
-                return <Route path={category.name} element={<Category category={category.name}/>} />;
-            });
-        };
         return (
             <div className="App">
                 <Header />
                 <Routes>
-                <Route path={"/"} element={<Category/>} />
-                    {this.createRoutes}
+                    <Route path="/" element={<Category />} />
+                    <Route path="/:category" element={<Category />} />
                     <Route path="cart" element={<Cart />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
-                {/* <Category /> */}
             </div>
         );
     }
 }
 
-export default graphql(getCategoriesQuery)(App);
+export default App;

@@ -38,4 +38,27 @@ const getCategoriesQuery = gql`
     }
 `;
 
-export {getAllQuery, getCategoriesQuery}
+
+const getProductsQuery = gql`
+query {
+  category
+  {
+  products {
+    id
+    name
+    inStock
+    gallery
+    prices {
+      currency {
+        label
+        symbol
+      }
+      amount
+    }
+     brand
+  }
+}
+}
+`;
+
+export {getAllQuery, getCategoriesQuery, getProductsQuery}
