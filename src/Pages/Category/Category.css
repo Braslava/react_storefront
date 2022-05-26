@@ -10,4 +10,6 @@ h1 {
 .category__product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-bottom: 4rem;
 }

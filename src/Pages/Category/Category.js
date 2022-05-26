@@ -4,12 +4,13 @@ import { graphql } from "@apollo/client/react/hoc";
 import { withRouter } from "react-router";
 import { getProductsQuery } from "../../query";
 import "./Category.css";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 import Loader from "../../components/Loader/Loader";
 
 class Category extends Component {
-    displayProducts() {
-        console.log(this.props.data);
+    displayProducts = () => {
+        //console.log(this.props.data);
         const { loading } = this.props.data;
         if (loading) {
             //console.log("loading...")
@@ -17,10 +18,7 @@ class Category extends Component {
         } else {
             return this.props.data.category.products.map((product) => {
                 return (
-                    <div className="product-card" key={product.id}>
-                        <h2>{product.name}</h2>
-                        <img src={product.gallery[0]}  width={240} alt="" />
-                    </div>
+                    <ProductCard product={product} key={product.id}/>
                 );
             });
         }
