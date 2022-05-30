@@ -1,8 +1,13 @@
 .carousel {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
 }
 
 
 .carousel__inner {
+    height: 350px;
+    width: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +15,8 @@
 }
 
 .carousel__img--main {
-    height: 350px;
+    max-height: 350px;
+    max-width: 500px;
     object-fit: cover;
 }
 
@@ -48,4 +54,16 @@
 
 .hidden {
     visibility: hidden;
+}
+
+.carousel__thumbnails-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.carousel__thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
 }
