@@ -1,0 +1,9 @@
+.product-page__container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-auto-flow: column;
+    justify-content: start;
+    padding: 3rem 0;
+    margin: 1rem;
+}
+

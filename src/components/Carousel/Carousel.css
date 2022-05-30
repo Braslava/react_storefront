@@ -1,0 +1,51 @@
+.carousel {
+}
+
+
+.carousel__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel__img--main {
+    height: 350px;
+    object-fit: cover;
+}
+
+.carousel__button {
+    z-index: 100;
+    border: none;
+    background-color: var(--main-text);
+    opacity: 0.8;
+    height: 2rem;
+    padding: 0.8rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.carousel__button--left {
+    left: 0;
+}
+
+.carousel__button--left::after {
+    content: url("./../../assets/chevron_left_white.svg");
+    left: 0;
+}
+
+.carousel__button--right {
+    right: 0;
+}
+
+.carousel__button--right::after {
+    content: url("./../../assets/chevron_right_white.svg");
+    right: 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
