@@ -13,8 +13,7 @@ import "./Header.css";
 class Header extends Component {
     render() {
         const { categories, loading } = this.props.data;
-        console.log(this.props.data);
-
+       // console.log(this.props.data);
         if (loading) return;
 
         return (
