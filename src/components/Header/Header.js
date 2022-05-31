@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { gql } from "@apollo/client";
 import { graphql } from "@apollo/client/react/hoc";
 import { getCategoriesQuery } from "../../query";
 
@@ -23,7 +22,7 @@ class Header extends Component {
                         return (
                             <Link
                                 className="header__nav-link"
-                                to="/{category.name}"
+                                to={category.name}
                                 key={category.name}
                             >
                                 {category.name}

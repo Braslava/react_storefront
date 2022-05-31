@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-
 import "./Carousel.css";
-
-import chevronRight from "../../assets/chevron_right_white.svg";
-import chevronLeft from "../../assets/chevron_left_white.svg";
 
 class Carousel extends Component {
     constructor(props) {
@@ -14,7 +10,7 @@ class Carousel extends Component {
     showButtons = () => {};
 
     render() {
-        console.log(this.props.images[this.state.currentImg]);
+        // console.log(this.props.images[this.state.currentImg]);
         const { images, name } = this.props;
         return (
             <div>

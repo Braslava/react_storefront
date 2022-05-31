@@ -13,7 +13,7 @@ class ProductCard extends Component {
                     <img
                         src={gallery[0]}
                         width={240}
-                        alt=""
+                        alt={name}
                         className="product-card__img"
                     />
                     <h2 className="product-card__title">{brand} {name}</h2>

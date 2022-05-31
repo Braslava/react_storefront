@@ -5,23 +5,29 @@ import { getProductsQuery } from "../../query";
 import "./Category.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
+import { Link } from "react-router-dom";
+
 import Loader from "../../components/Loader/Loader";
 
 class Category extends Component {
     displayProducts = () => {
         //console.log(this.props.data);
-        const { loading } = this.props.data;
+        const { loading, category } = this.props.data;
         if (loading) {
             //console.log("loading...")
             return <Loader />;
         } else {
-            return this.props.data.category.products.map((product) => {
+            return category.products.map((product) => {
                 return (
-                    <ProductCard product={product} key={product.id}/>
+                    <ProductCard
+                        product={product}
+                        id={product.id}
+                        key={product.id}
+                    />
                 );
             });
         }
-    }
+    };
     render() {
         return (
             <main className="category">
