@@ -1,7 +1,6 @@
 import { Component } from "react";
 //import logo from "../../assets/green_logo.png";
 import { graphql } from "@apollo/client/react/hoc";
-import { withRouter } from "react-router";
 import { getProductsQuery } from "../../query";
 import "./Category.css";
 import ProductCard from "../../components/ProductCard/ProductCard";

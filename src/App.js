@@ -11,7 +11,7 @@ class App extends Component {
     state = {
         cart: [],
     };
-    
+
     render() {
         return (
             <div className="App">
