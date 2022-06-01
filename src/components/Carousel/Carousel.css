@@ -69,7 +69,18 @@
     gap: 12px;
 }
 
-.carousel__thumbnail {
+
+.carousel__thumbnail-btn {
+    border: none;
+    background-color: var(--white);
+}
+
+.carousel__thumbnail-btn:hover, .carousel__thumbnail-btn:active {
+    box-shadow: var(--box-shadow);
+}
+
+
+.carousel__thumbnail-img {
     width: 80px;
     height: 80px;
     object-fit: cover;
