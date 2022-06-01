@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { graphql } from "@apollo/client/react/hoc";
-import { getCategoriesQuery } from "../../query";
+import { getCategoriesQuery } from "../../queries";
 
 import logo from "../../assets/logo_green.svg";
 import CurrencySelector from "../CurrencySelector/CurrencySelector";

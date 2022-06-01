@@ -1,24 +1,22 @@
 import React, { Component } from "react";
 import { gql } from "@apollo/client";
 import { graphql } from "@apollo/client/react/hoc";
-import { getSingleProductQuery} from "../../query";
-
+import { getSingleProductQuery } from "../../queries";
+import withRouter from "../../WithRouter";
 import "./ProductPage.css";
 import Loader from "../../components/Loader/Loader";
 import Carousel from "../../components/Carousel/Carousel";
 
-
-
 class ProductPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {};
     }
 
     render() {
-        const { loading } = this.props.data;
+        const { loading, product } = this.props.data;
         console.log(this);
-        const { product } = this.props.data;
+        // const { product } = this.props.data;
         return (
             <main className="product-page">
                 {loading && <Loader />}
@@ -40,4 +38,14 @@ class ProductPage extends Component {
     }
 }
 
-export default graphql(getSingleProductQuery)(ProductPage);
+export default withRouter(graphql(
+    getSingleProductQuery,
+    {
+        options: (ownProps) => ({
+            variables: {
+                //id: "ps-5",
+                id: ownProps.router.params.productId,
+            },
+        }),
+    })(ProductPage))
+;

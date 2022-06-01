@@ -1,7 +1,9 @@
 import { Component } from "react";
 //import logo from "../../assets/green_logo.png";
 import { graphql } from "@apollo/client/react/hoc";
-import { getProductsQuery } from "../../query";
+import { getProductsQuery } from "../../queries";
+import withRouter from "../../WithRouter";
+
 import "./Category.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
@@ -11,7 +13,7 @@ import Loader from "../../components/Loader/Loader";
 
 class Category extends Component {
     displayProducts = () => {
-        //console.log(this.props.data);
+        console.log(this.props);
         const { loading, category } = this.props.data;
         if (loading) {
             //console.log("loading...")
@@ -40,5 +42,16 @@ class Category extends Component {
     }
 }
 
-export default graphql(getProductsQuery)(Category);
+//export default graphql(getProductsQuery)(Category);
 //export default Category;
+
+export default withRouter(
+    graphql(getProductsQuery, {
+        options: (ownProps) => ({
+            variables: {
+                // input:{ title: "all"},
+                input: { title: ownProps.router.params.category },
+            },
+        }),
+    })(Category)
+);

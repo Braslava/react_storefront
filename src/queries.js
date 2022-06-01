@@ -40,8 +40,8 @@ const getCategoriesQuery = gql`
 
 
 const getProductsQuery = gql`
-query {
-  category
+query($input: CategoryInput) {
+  category(input: $input)
   {
   products {
     id
@@ -62,8 +62,8 @@ query {
 `;
 
 const getSingleProductQuery = gql`
-    query{
-        product(id: "ps-5") {
+    query($id: String!){
+        product(id: $id) {
             id
             name
             inStock
