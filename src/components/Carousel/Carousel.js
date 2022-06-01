@@ -7,11 +7,11 @@ class Carousel extends Component {
         this.state = { currentImg: 0, showButtons: false };
     }
 
-    showButtons = () => {};
-
     render() {
         // console.log(this.props.images[this.state.currentImg]);
         const { images, name } = this.props;
+        const multipleImages = images.length >1;
+        console.log("multiple ? ", multipleImages)
         return (
             <div>
                 <div className="carousel">
@@ -22,14 +22,14 @@ class Carousel extends Component {
                     </div>
                     <div
                         className="carousel__inner"
-                        onMouseOver={this.showButtons()}
+                        // onMouseOver={this.showButtons()}
                     >
                         <img
                             className="carousel__img--main"
                             src={images[this.state.currentImg]}
                             alt={name}
                         />
-                        <button
+                        {multipleImages && <button
                             className="carousel__button carousel__button--left"
                             onClick={() => {
                                 this.state.currentImg > 0 &&
@@ -37,8 +37,8 @@ class Carousel extends Component {
                                         currentImg: this.state.currentImg - 1,
                                     });
                             }}
-                        ></button>
-                        <button
+                        ></button>}
+                        {multipleImages && <button
                             className="carousel__button carousel__button--right"
                             onClick={() => {
                                 this.state.currentImg < images.length - 1 &&
@@ -46,7 +46,7 @@ class Carousel extends Component {
                                         currentImg: this.state.currentImg + 1,
                                     });
                             }}
-                        ></button>
+                        ></button>}
                     </div>
                 </div>
             </div>
