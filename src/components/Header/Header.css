@@ -21,7 +21,7 @@
     transition: all 300ms ease-in-out;
 }
 
-.header__nav-link:hover, .header__nav-link:focus, .active-link {
+.header__nav-link:hover, .header__nav-link:focus, .active {
     color: var(--green);
     border-bottom: 2px solid var(--green);
 }

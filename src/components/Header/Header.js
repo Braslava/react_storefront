@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { graphql } from "@apollo/client/react/hoc";
 import { getCategoriesQuery } from "../../queries";
@@ -20,13 +20,13 @@ class Header extends Component {
                 <div className="header__nav-items-wrapper">
                     {categories.map((category) => {
                         return (
-                            <Link
+                            <NavLink
                                 className="header__nav-link"
                                 to={category.name}
                                 key={category.name}
                             >
                                 {category.name}
-                            </Link>
+                            </NavLink>
                         );
                     })}
                 </div>

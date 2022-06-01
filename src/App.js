@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Cart from "./Pages/Cart/Cart";
 import ProductPage from "./Pages/ProductPage/ProductPage";
 import NotFound from "./Pages/NotFound/NotFound";
-import { Routes, Route, Link, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 class App extends Component {
     state = {
