@@ -7,8 +7,6 @@ import withRouter from "../../WithRouter";
 import "./Category.css";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
-import { Link } from "react-router-dom";
-
 import Loader from "../../components/Loader/Loader";
 
 class Category extends Component {

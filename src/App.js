@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Cart from "./Pages/Cart/Cart";
 import ProductPage from "./Pages/ProductPage/ProductPage";
 import NotFound from "./Pages/NotFound/NotFound";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 class App extends Component {
     state = {
@@ -17,7 +17,7 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <Routes>
-                    <Route path="/" element={<Category />} />
+                    <Route path="/" element={<Navigate to="/all" replace />} />
                     <Route path="/:category" element={<Category />} />
                     <Route
                         path="/:category/:productId"
