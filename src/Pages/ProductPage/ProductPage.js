@@ -28,8 +28,8 @@ class ProductPage extends Component {
                         />
 
                         <div className="product-page__info">
-                            <p>{product.brand}</p>
-                            <p>{product.name}</p>
+                            <h1 className="product-page__heading">{product.brand}  <p className="product-page__product-title">{product.name}</p ></h1>
+                           
                         </div>
                     </div>
                 )}
@@ -43,7 +43,6 @@ export default withRouter(graphql(
     {
         options: (ownProps) => ({
             variables: {
-                //id: "ps-5",
                 id: ownProps.router.params.productId,
             },
         }),
