@@ -7,3 +7,24 @@
     margin: 1rem;
 }
 
+.product-page__info {
+    margin-left: 2rem;
+}
+
+.product-page__heading {
+    font-size: 1.9rem;
+    font-weight: 600;
+    font-family: 'Raleway';
+    line-height: 140%;
+}
+
+.product-page__product-title {
+    display: block;
+    font-weight: 400;
+    margin: 0;
+}
+
+.product-page__small-title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
