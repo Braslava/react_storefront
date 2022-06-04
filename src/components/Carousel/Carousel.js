@@ -23,7 +23,7 @@ class Carousel extends Component {
 
     showClickedImage = (e) => {
         const clickedImageIndex = e.currentTarget.getAttribute("index");
-        console.log("index", clickedImageIndex);
+        // console.log("index", clickedImageIndex);
         this.setState({
             currentImgIndex: parseInt(clickedImageIndex),
         });
@@ -32,7 +32,7 @@ class Carousel extends Component {
     };
 
     render() {
-        console.log(this.props.images[this.state.currentImgIndex]);
+      //  console.log(this.props.images[this.state.currentImgIndex]);
         const { images, name } = this.props;
         const multipleImages = images.length > 1;
         //  console.log("multiple? ", multipleImages)
